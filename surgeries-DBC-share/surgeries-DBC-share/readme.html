@@ -1,0 +1,266 @@
+<html><head><style>body {
+   color: black;
+}
+</style></head><body><h1 id="surgeries-and-double-branched-covers-readme">Surgeries and Double Branched Covers – README</h1>
+<p>This project studies when the <strong>double branched cover</strong> of a knot in (S^3) can also be described as a <strong>Dehn surgery</strong> on a (possibly different) knot. The strategy is:</p>
+<ol>
+<li>Use <strong>Heegaard Floer homology</strong> to rule out most slopes via an <em>HF rank bound</em>.</li>
+<li>On the remaining slopes, compare <strong>Casson invariants</strong> of the double branched cover and the surgery manifolds.</li>
+<li>For the still-remaining slopes, compare <strong>Turaev–Viro invariants</strong> of the same manifolds.</li>
+</ol>
+<p>The code is organized as a small Python package, <code>surgeries_dbc</code>, plus several Sage “driver” scripts that orchestrate the full pipeline inside a Sage-enabled Docker container. There is also an optional workflow to run the Turaev–Viro step in <strong>native Python with Regina + SnapPy</strong> outside Docker.</p>
+<p>This document is written for someone who is comfortable with Python, Docker, and basic 3-manifold notions.</p>
+<hr>
+<h2 id="0-layout-and-core-scripts">0. Layout and core scripts</h2>
+<p><strong>Package</strong></p>
+<ul>
+<li><code>surgeries_dbc/</code><ul>
+<li><code>models.py</code> – defines <code>KnotRecord</code> (name, DT codes, invariants, HF data, etc.).</li>
+<li><code>io.py</code> – all file I/O:<ul>
+<li>load knot lists, DT codes, numeric DT codes</li>
+<li>write/read classical invariant lists</li>
+<li>write Casson logs and <code>failList.txt</code>.</li>
+</ul>
+</li>
+<li><code>invariants_det_only.py</code> – computation of <strong>determinants only</strong>.</li>
+<li><code>invariants.py</code> – full classical invariants:
+(\det(K), A(K), \sigma(K), J_K(t), \lambda(\Sigma_2(K))).</li>
+<li><code>hf_casson.py</code> – HF data attachment + original HF + Casson comparison.</li>
+<li><code>hf_filter.py</code> – <strong>HF-only filter</strong>, using det + HF rank bounds to eliminate slopes before Casson.</li>
+<li><code>casson_only.py</code> – Casson comparison given precomputed classical data.</li>
+<li><code>tv_compare.py</code> – Turaev–Viro comparison for slopes listed in <code>failList.txt</code>.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Driver scripts (Sage)</strong></p>
+<ul>
+<li><p><code>run_pipeline.sage</code><br>Original 4-stage pipeline that:</p>
+<ol>
+<li>Builds numeric DT list.</li>
+<li>Computes <strong>all</strong> classical invariants for all knots.</li>
+<li>Runs HF + Casson comparison, writing:<ul>
+<li><code>Casson-comparison-results.txt</code></li>
+<li><code>failList.txt</code> (slopes not ruled out).</li>
+</ul>
+</li>
+<li>Runs Turaev–Viro comparison on slopes in <code>failList.txt</code>.</li>
+</ol>
+</li>
+<li><p><code>run_fast_pipeline.sage</code><br><strong>HF-first “fast” pipeline:</strong></p>
+<ol>
+<li>Build numeric DT list if needed.</li>
+<li>Load knots.</li>
+<li>Compute <strong>determinants</strong> (with caching via <code>detList.txt</code>).</li>
+<li>Attach HF data (<code>mList</code>, <code>nList</code>, <code>HFboundList</code>).</li>
+<li>Run HF-only filter → <code>hf_failList.txt</code> + a set of <strong>HF-surviving slopes</strong>.</li>
+<li>Compute <em>classical invariants only for HF-survivor knots</em>, with caching via
+<code>aList.txt</code>, <code>sigList.txt</code>, <code>jonesList.txt</code>, <code>cassonList.txt</code>.</li>
+<li>Run Casson comparison on HF-survivors → final <code>failList.txt</code>.</li>
+<li>Run Turaev–Viro comparison on slopes in <code>failList.txt</code>.</li>
+</ol>
+</li>
+<li><p><code>run_det_pipeline.sage</code><br>Minimal pipeline to compute <strong>only</strong> <code>detList.txt</code> from DT data.</p>
+</li>
+<li><p><code>run_casson_only.sage</code><br>Casson-only pipeline that assumes classical lists already exist and:</p>
+<ol>
+<li>Attaches det + HF data.</li>
+<li>Runs HF-only filter (HF survivors only).</li>
+<li>Loads classical invariants <strong>only for HF-survivor knots</strong> from disk.</li>
+<li>Runs Casson comparison on those slopes, writing:<ul>
+<li><code>Casson-comparison-results.txt</code></li>
+<li><code>failList.txt</code>.</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<p>These scripts all assume the data directory is mounted as <code>/work</code> and the repo as <code>/repo</code> inside the Docker container.</p>
+<hr>
+<h2 id="1-required-data-files-in-work-">1. Required data files in <code>/work</code></h2>
+<p>At minimum, the following text files (one entry per line) are expected in <code>/work</code>:</p>
+<ul>
+<li><code>knotList.txt</code> – knot names (e.g. <code>11n42</code>, <code>12n345</code>).</li>
+<li><code>DTList.txt</code> – alpha DT codes, one per knot.</li>
+<li><code>mList.txt</code> – integer (m) data for HF obstruction.</li>
+<li><code>nList.txt</code> – integer (n) data for HF obstruction.</li>
+<li><code>HFboundList.txt</code> – HF rank bound data.</li>
+</ul>
+<p>Optional (possibly cached) lists:</p>
+<ul>
+<li><code>numDTList.txt</code> – numeric DT codes (this is usually generated by <code>DT-convert.sage</code>).</li>
+<li><code>detList.txt</code> – determinants (\det(K)).</li>
+<li><code>aList.txt</code> – <code>A(K)</code> values, stored as SymPy-readable strings.</li>
+<li><code>sigList.txt</code> – signatures (\sigma(K)).</li>
+<li><code>jonesList.txt</code> – Jones polynomials (SymPy expressions).</li>
+<li><code>cassonList.txt</code> – Casson invariants of double branched covers (\lambda(\Sigma_2(K))).</li>
+</ul>
+<p>The pipelines will <strong>reuse</strong> existing lists when possible and compute only what is missing.</p>
+<hr>
+<h2 id="2-running-pipelines-in-docker">2. Running pipelines in Docker</h2>
+<p>Everything is designed to run inside a Sage-enabled Docker image, e.g.:</p>
+<pre><code class="lang-bash">docker run --platform=linux/amd64 -it \
+  -<span class="ruby">v <span class="hljs-string">"$PWD"</span><span class="hljs-symbol">:/work</span> \
+</span>  -<span class="ruby">v <span class="hljs-string">"$(cd ..; pwd)"</span><span class="hljs-symbol">:/repo</span> \
+</span>  computop/sage:latest \
+  sage /repo/run_fast_pipeline.sage
+</code></pre>
+<p>Here:</p>
+<ul>
+<li><code>&quot;$PWD&quot;</code> is the data directory containing <code>knotList.txt</code>, <code>DTList.txt</code>, etc.  </li>
+<li><code>&quot;$(cd ..; pwd)&quot;</code> is the parent directory containing the repo (with <code>surgeries_dbc/</code> and the driver scripts).</li>
+</ul>
+<h3 id="2-1-original-full-pipeline">2.1. Original full pipeline</h3>
+<p>Use when you want the original “compute everything” behavior:</p>
+<pre><code class="lang-bash">docker run --platform=linux/amd64 -it \
+  -<span class="ruby">v <span class="hljs-string">"$PWD"</span><span class="hljs-symbol">:/work</span> \
+</span>  -<span class="ruby">v <span class="hljs-string">"$(cd ..; pwd)"</span><span class="hljs-symbol">:/repo</span> \
+</span>  computop/sage:latest \
+  sage /repo/run_pipeline.sage
+</code></pre>
+<p>This will:</p>
+<ol>
+<li>Create <code>numDTList.txt</code> if missing.</li>
+<li>Compute and/or load all classical invariants.</li>
+<li>Run HF + Casson comparison and write <code>Casson-comparison-results.txt</code> and <code>failList.txt</code>.</li>
+<li>Run Turaev–Viro comparison using <code>failList.txt</code>.</li>
+</ol>
+<h3 id="2-2-fast-hf-first-pipeline">2.2. Fast HF-first pipeline</h3>
+<p>Use when you want to avoid computing classical invariants for knots that HF already rules out:</p>
+<pre><code class="lang-bash">docker run --platform=linux/amd64 -it \
+  -<span class="ruby">v <span class="hljs-string">"$PWD"</span><span class="hljs-symbol">:/work</span> \
+</span>  -<span class="ruby">v <span class="hljs-string">"$(cd ..; pwd)"</span><span class="hljs-symbol">:/repo</span> \
+</span>  computop/sage:latest \
+  sage /repo/run_fast_pipeline.sage
+</code></pre>
+<p>Typical behavior:</p>
+<ul>
+<li><p>If <code>detList.txt</code> exists: load <code>det(K)</code> from file.<br>Otherwise: compute all determinants and write <code>detList.txt</code>.</p>
+</li>
+<li><p>Attach HF data and run the HF rank obstruction.<br>This writes <code>hf_failList.txt</code> and gives a dictionary of <strong>HF-surviving slopes</strong>.</p>
+</li>
+<li><p>Classical invariants are then computed <strong>only</strong> for those knots whose slopes survive HF, and cached per knot index via <code>aList.txt</code>, <code>sigList.txt</code>, <code>jonesList.txt</code>, <code>cassonList.txt</code>.</p>
+</li>
+<li><p>Casson comparison runs only on HF-survivors, and the final slopes that Casson cannot distinguish are written to <code>failList.txt</code> in the format:</p>
+<pre><code class="lang-text">14n1009; DT:[...]; p = 13; q = [<span class="hljs-string">-5</span>, <span class="hljs-string">-4</span>, <span class="hljs-string">-3</span>, <span class="hljs-string">-2</span>, <span class="hljs-string">-1</span>, 1, 2, 3, 4]
+</code></pre>
+</li>
+<li><p>Finally, Turaev–Viro comparison is run on the slopes in <code>failList.txt</code>.</p>
+</li>
+</ul>
+<p>If at some point you already have a trustworthy <code>failList.txt</code> and only want to redo Turaev–Viro, it is safe to run the <strong>TV stage directly</strong> using <code>tv_compare.py</code> (see §4).</p>
+<h3 id="2-3-determinant-only-pipeline">2.3. Determinant-only pipeline</h3>
+<p>To only build <code>detList.txt</code>:</p>
+<pre><code class="lang-bash">docker run --platform=linux/amd64 -it \
+  -<span class="ruby">v <span class="hljs-string">"$PWD"</span><span class="hljs-symbol">:/work</span> \
+</span>  -<span class="ruby">v <span class="hljs-string">"$(cd ..; pwd)"</span><span class="hljs-symbol">:/repo</span> \
+</span>  computop/sage:latest \
+  sage /repo/run_det_pipeline.sage
+</code></pre>
+<p>This:</p>
+<ul>
+<li>Uses DT codes and SnapPy to compute (|\Delta_K(-1)|) for every knot.</li>
+<li>Writes <code>detList.txt</code> with one integer per knot.</li>
+</ul>
+<h3 id="2-4-casson-only-pipeline-with-precomputed-classical-data-">2.4. Casson-only pipeline (with precomputed classical data)</h3>
+<p>This is useful when:</p>
+<ul>
+<li>You already have <code>detList.txt</code>, <code>aList.txt</code>, <code>sigList.txt</code>, <code>jonesList.txt</code>, <code>cassonList.txt</code> from a previous experiment / external computation.</li>
+<li>You want to re-run <strong>only</strong> the HF + Casson logic to produce a fresh <code>failList.txt</code>.</li>
+</ul>
+<p>Run:</p>
+<pre><code class="lang-bash">docker run --platform=linux/amd64 -it \
+  -<span class="ruby">v <span class="hljs-string">"$PWD"</span><span class="hljs-symbol">:/work</span> \
+</span>  -<span class="ruby">v <span class="hljs-string">"$(cd ..; pwd)"</span><span class="hljs-symbol">:/repo</span> \
+</span>  computop/sage:latest \
+  sage /repo/run_casson_only.sage
+</code></pre>
+<p>This will:</p>
+<ol>
+<li>Load the knot records.</li>
+<li>Load determinants from <code>detList.txt</code>.</li>
+<li>Attach HF data and run the HF-only filter → <code>hf_failList.txt</code> + HF-survivors.</li>
+<li>Load (A(K)), (\sigma(K)), Jones, and Casson(DBC) <strong>only for HF-survivor knots</strong> from the existing lists (with progress reporting).</li>
+<li>Run Casson comparison on the surviving slopes and write:<ul>
+<li><code>Casson-comparison-results.txt</code></li>
+<li><code>failList.txt</code> (post-Casson survivors only).</li>
+</ul>
+</li>
+</ol>
+<p>No classical recomputation is done; everything is read from disk.</p>
+<hr>
+<h2 id="3-optional-external-turaev-viro-workflow-native-python-regina-">3. Optional external Turaev–Viro workflow (native Python + Regina)</h2>
+<p>For performance reasons, you may want to run Turaev–Viro invariants <strong>outside Docker</strong>, using your local installs of <strong>SnapPy</strong> and <strong>Regina</strong>. The code supports this via the <code>tv_compare</code> module.</p>
+<h3 id="3-1-python-virtual-environment">3.1. Python virtual environment</h3>
+<p>Create an environment (example using <code>python3.11</code>):</p>
+<pre><code class="lang-bash">python3<span class="hljs-number">.11</span> -m venv tv-<span class="hljs-keyword">env</span>
+<span class="hljs-keyword">source</span> tv-<span class="hljs-keyword">env</span>/bin/activate
+pip install snappy-manifolds regina-normal
+pip install sympy
+</code></pre>
+<p>Make sure this succeeds:</p>
+<pre><code class="lang-bash"><span class="hljs-keyword">python</span> -c <span class="hljs-string">"import snappy, regina, sympy; print('ok')"</span>
+</code></pre>
+<h3 id="3-2-running-turaev-viro-comparison-on-a-directory">3.2. Running Turaev–Viro comparison on a directory</h3>
+<p>Pick a working directory that already contains a <code>failList.txt</code> produced by one of the pipelines (Docker or otherwise). Then, from the repo root:</p>
+<pre><code class="lang-bash">source tv-env<span class="hljs-meta-keyword">/bin/</span>activate   <span class="hljs-meta"># <span class="hljs-meta-keyword">if</span> not already activated</span>
+python -m surgeries_dbc.tv_compare <span class="hljs-meta-keyword">/path/</span>to/working-directory
+</code></pre>
+<p>This will:</p>
+<ul>
+<li>Read <code>failList.txt</code> in that directory.</li>
+<li>For each line (K; DT; p; {q}):<ul>
+<li>Build the double branched cover and surgery manifolds using SnapPy.</li>
+<li>Convert to Regina triangulations.</li>
+<li>Compute Turaev–Viro invariant at level 5 using Regina’s <code>turaevViro(5, alg=regina.ALG_TREEWIDTH)</code>.</li>
+<li>Compare values and update:<ul>
+<li><code>whatsLeft.txt</code> – remaining (q)-values that Turaev–Viro has not ruled out.</li>
+<li><code>exceptions.txt</code> – cases where Turaev–Viro fails to distinguish.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>The script is resumable: it uses <code>whatsLeft.txt</code> and <code>progress.txt</code> to know what’s already been done. If it is killed partway through, you can re-run the same command and it will pick up where it left off (modulo the time-limit logic for slow covers).</p>
+<hr>
+<h2 id="4-output-files-and-their-meaning">4. Output files and their meaning</h2>
+<p>Key text files written into <code>/work</code> (or the external TV directory):</p>
+<ul>
+<li><code>detList.txt</code> – determinants (\det(K)).</li>
+<li><code>aList.txt</code>, <code>sigList.txt</code>, <code>jonesList.txt</code> – classical invariants.</li>
+<li><code>cassonList.txt</code> – Casson invariants of double branched covers (\lambda(\Sigma_2(K))).</li>
+<li><code>hf_failList.txt</code> – slopes not ruled out by HF rank bounds.</li>
+<li><code>Casson-comparison-results.txt</code> – detailed HF + Casson comparison log, listing for each slope:<ul>
+<li>Casson(DBC)</li>
+<li>Casson(surgery)</li>
+<li>whether Casson distinguishes or not.</li>
+</ul>
+</li>
+<li><code>failList.txt</code> – the “working list” of slopes <strong>not ruled out</strong> by Casson (used as input for Turaev–Viro step).</li>
+<li><code>whatsLeft.txt</code> – Turaev–Viro’s internal working list of remaining slopes (updated as slopes are ruled out).</li>
+<li><code>exceptions.txt</code> – slopes for which Turaev–Viro does not distinguish the branched cover from the surgery (the genuinely troublesome cases).</li>
+<li><code>progress.txt</code> – textual progress log for Turaev–Viro.</li>
+</ul>
+<hr>
+<h2 id="5-suggested-usage-patterns">5. Suggested usage patterns</h2>
+<ul>
+<li><p><strong>Exploratory work / small datasets</strong><br>Use <code>run_pipeline.sage</code> to produce everything (classical + HF + Casson + TV) in one go.</p>
+</li>
+<li><p><strong>Large datasets</strong><br>Use <code>run_det_pipeline.sage</code> once to build <code>detList.txt</code>.<br>Then use <code>run_fast_pipeline.sage</code> to:</p>
+<ul>
+<li>apply HF obstruction first,</li>
+<li>compute classical data only where needed,</li>
+<li>and hand a trimmed <code>failList.txt</code> to Turaev–Viro.</li>
+</ul>
+</li>
+<li><p><strong>Re-running Casson with updated HF bounds / lists</strong><br>Use <code>run_casson_only.sage</code> with precomputed <code>aList.txt</code>, <code>sigList.txt</code>, <code>jonesList.txt</code>, <code>cassonList.txt</code>.</p>
+</li>
+<li><p><strong>Heavy TV work</strong><br>Once you have a <code>failList.txt</code>, either:</p>
+<ul>
+<li>let <code>run_fast_pipeline.sage</code> drive the TV stage inside Docker, or  </li>
+<li>switch to the external <code>python -m surgeries_dbc.tv_compare ...</code> workflow with native SnapPy + Regina.</li>
+</ul>
+</li>
+</ul>
+<hr>
+<p>That should be consistent with the code you’re currently running; if you rename any scripts or decide to drop the “original” pipeline entirely in favor of the fast one, it’s easy to thin this down.</p>
+</body></html>

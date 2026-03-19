@@ -1,0 +1,528 @@
+Preparing to compare Turaev-Viro invariants of DBC's and surgeries for the given knots.
+Calculating Turaev-Viro invariants for K = 15n1353
+T-V of DBC is 2/5 x^3 - 2/5 x^2 + 3/10
+T-V of surgery with q = 2 is 57/5 x^3 - 57/5 x^2 + 73/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n6316
+T-V of DBC is x^3 - x^2 + 5/2
+T-V of surgery with q = -1 is 16 x^3 - 16 x^2 + 10
+T-V of surgery with q = 1 is 16 x^3 - 16 x^2 + 10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n6415
+T-V of DBC is x^3 - x^2 + 5/2
+T-V of surgery with q = -1 is 16 x^3 - 16 x^2 + 10
+T-V of surgery with q = 1 is 16 x^3 - 16 x^2 + 10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n10496
+T-V of DBC is x^3 - x^2 + 5/2
+T-V of surgery with q = -1 is 16 x^3 - 16 x^2 + 10
+T-V of surgery with q = 1 is 16 x^3 - 16 x^2 + 10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n10734
+T-V of DBC is x^3 - x^2 + 5/2
+T-V of surgery with q = -1 is 16 x^3 - 16 x^2 + 10
+T-V of surgery with q = 1 is 16 x^3 - 16 x^2 + 10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n11723
+T-V of DBC is -2/5 x^3 + 2/5 x^2 + 17/10
+T-V of surgery with q = 1 is 13/5 x^3 - 13/5 x^2 + 17/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n16630
+T-V of DBC is 2/5 x^3 - 2/5 x^2 + 3/10
+T-V of surgery with q = 2 is 57/5 x^3 - 57/5 x^2 + 73/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n18579
+T-V of DBC is 2/5 x^3 - 2/5 x^2 + 14/5
+T-V of surgery with q = -1 is 69/10 x^3 - 69/10 x^2 + 43/10
+T-V of surgery with q = 1 is 69/10 x^3 - 69/10 x^2 + 43/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n21986
+T-V of DBC is 1/10 x^3 - 1/10 x^2 + 1/5
+T-V of surgery with q = -1 is 31/10 x^3 - 31/10 x^2 + 11/5
+T-V of surgery with q = 1 is 51/10 x^3 - 51/10 x^2 + 37/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n29678
+T-V of DBC is 1/2 x^3 - 1/2 x^2 + 3/2
+T-V of surgery with q = -1 is 7 x^3 - 7 x^2 + 9/2
+T-V of surgery with q = 1 is 7 x^3 - 7 x^2 + 9/2
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n29901
+T-V of DBC is 89/10 x^3 - 89/10 x^2 + 29/5
+T-V of surgery with q = -1 is 1199/10 x^3 - 1199/10 x^2 + 374/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n32553
+T-V of DBC is 89/10 x^3 - 89/10 x^2 + 29/5
+
+Calculating Turaev-Viro invariants for K = 15n32553
+T-V of DBC is 89/10 x^3 - 89/10 x^2 + 29/5
+T-V of surgery with q = -1 is 1199/10 x^3 - 1199/10 x^2 + 374/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n33866
+T-V of DBC is 59/10 x^3 - 59/10 x^2 + 19/5
+T-V of surgery with q = -1 is 1029/10 x^3 - 1029/10 x^2 + 643/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n33972
+T-V of DBC is 59/10 x^3 - 59/10 x^2 + 19/5
+T-V of surgery with q = -1 is 1029/10 x^3 - 1029/10 x^2 + 643/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n34264
+T-V of DBC is 1/2
+T-V of surgery with q = -1 is 7 x^3 - 7 x^2 + 9/2
+T-V of surgery with q = 1 is 7 x^3 - 7 x^2 + 9/2
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n37624
+T-V of DBC is 2/5 x^3 - 2/5 x^2 + 3/10
+T-V of surgery with q = -1 is 109/10 x^3 - 109/10 x^2 + 34/5
+T-V of surgery with q = 1 is 52/5 x^3 - 52/5 x^2 + 34/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n40196
+T-V of DBC is -1/10 x^3 + 1/10 x^2 + 13/10
+T-V of surgery with q = 2 is 112/5 x^3 - 112/5 x^2 + 143/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n40200
+[working on T-V invariant of DBC]
+Too slow on cover; aborting this run early.
+
+Calculating Turaev-Viro invariants for K = 15n40200
+T-V of DBC is -1/10 x^3 + 1/10 x^2 + 13/10
+T-V of surgery with q = 2 is 269/10 x^3 - 269/10 x^2 + 173/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n42943
+T-V of DBC is 7/5 x^3 - 7/5 x^2 + 13/10
+T-V of surgery with q = -1 is 82/5 x^3 - 82/5 x^2 + 103/10
+T-V of surgery with q = 1 is 149/10 x^3 - 149/10 x^2 + 49/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n44595
+T-V of DBC is 19/10 x^3 - 19/10 x^2 + 13/10
+T-V of surgery with q = -1 is 62/5 x^3 - 62/5 x^2 + 83/10
+T-V of surgery with q = 1 is 99/10 x^3 - 99/10 x^2 + 63/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n47547
+T-V of DBC is 1/10 x^3 - 1/10 x^2 + 1/5
+T-V of surgery with q = -1 is 51/10 x^3 - 51/10 x^2 + 16/5
+T-V of surgery with q = 1 is 81/10 x^3 - 81/10 x^2 + 26/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n47773
+T-V of DBC is -1/10 x^3 + 1/10 x^2 + 4/5
+T-V of surgery with q = 2 is 59/10 x^3 - 59/10 x^2 + 19/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n48777
+T-V of DBC is 2/5 x^3 - 2/5 x^2 + 3/10
+T-V of surgery with q = -2 is 57/5 x^3 - 57/5 x^2 + 73/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n51697
+T-V of DBC is 19/10 x^3 - 19/10 x^2 + 23/10
+T-V of surgery with q = -2 is 319/10 x^3 - 319/10 x^2 + 99/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n51729
+T-V of DBC is 3/5 x^3 - 3/5 x^2 + 17/10
+T-V of surgery with q = -1 is 171/10 x^3 - 171/10 x^2 + 61/5
+T-V of surgery with q = 1 is 131/10 x^3 - 131/10 x^2 + 46/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n51748
+T-V of DBC is 3/5 x^3 - 3/5 x^2 + 17/10
+T-V of surgery with q = -4 is 3/5 x^3 - 3/5 x^2 + 7/10
+T-V of surgery with q = -3 is 13/5 x^3 - 13/5 x^2 + 17/10
+T-V of surgery with q = -2 is 31/10 x^3 - 31/10 x^2 + 11/5
+T-V of surgery with q = -1 is 8/5 x^3 - 8/5 x^2 + 6/5
+T-V of surgery with q = 1 is 3/5 x^3 - 3/5 x^2 + 7/10
+T-V of surgery with q = 2 is 13/5 x^3 - 13/5 x^2 + 17/10
+T-V of surgery with q = 3 is 31/10 x^3 - 31/10 x^2 + 11/5
+T-V of surgery with q = 4 is 8/5 x^3 - 8/5 x^2 + 6/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n55053
+T-V of DBC is 9/10 x^3 - 9/10 x^2 + 4/5
+T-V of surgery with q = -1 is 67/5 x^3 - 67/5 x^2 + 83/10
+T-V of surgery with q = 1 is 139/10 x^3 - 139/10 x^2 + 44/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n55123
+T-V of DBC is 1/2
+T-V of surgery with q = -1 is 11 x^3 - 11 x^2 + 15/2
+T-V of surgery with q = 1 is 11 x^3 - 11 x^2 + 15/2
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n56236
+T-V of DBC is x^3 - x^2 + 5/2
+T-V of surgery with q = -1 is 16 x^3 - 16 x^2 + 10
+T-V of surgery with q = 1 is 16 x^3 - 16 x^2 + 10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n63132
+T-V of DBC is 11/10 x^3 - 11/10 x^2 + 6/5
+T-V of surgery with q = 1 is 111/10 x^3 - 111/10 x^2 + 77/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n64865
+T-V of DBC is 8/5 x^3 - 8/5 x^2 + 17/10
+T-V of surgery with q = -2 is 511/10 x^3 - 511/10 x^2 + 317/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n65290
+T-V of DBC is 2/5 x^3 - 2/5 x^2 + 3/10
+T-V of surgery with q = -2 is 137/5 x^3 - 137/5 x^2 + 173/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n66147
+T-V of DBC is 11/10 x^3 - 11/10 x^2 + 6/5
+T-V of surgery with q = -1 is 28/5 x^3 - 28/5 x^2 + 37/10
+T-V of surgery with q = 1 is 91/10 x^3 - 91/10 x^2 + 57/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n68570
+T-V of DBC is 2/5 x^3 - 2/5 x^2 + 3/10
+T-V of surgery with q = -1 is 32/5 x^3 - 32/5 x^2 + 43/10
+T-V of surgery with q = 1 is 42/5 x^3 - 42/5 x^2 + 53/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n70434
+T-V of DBC is 8/5 x^3 - 8/5 x^2 + 27/10
+T-V of surgery with q = -2 is 263/5 x^3 - 263/5 x^2 + 327/10
+T-V of surgery with q = 2 is 561/10 x^3 - 561/10 x^2 + 347/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n71598
+T-V of DBC is 13/5 x^3 - 13/5 x^2 + 17/10
+T-V of surgery with q = -2 is 78/5 x^3 - 78/5 x^2 + 97/10
+T-V of surgery with q = -1 is 51/10 x^3 - 51/10 x^2 + 16/5
+T-V of surgery with q = 1 is 38/5 x^3 - 38/5 x^2 + 47/10
+T-V of surgery with q = 2 is 171/10 x^3 - 171/10 x^2 + 107/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n79164
+T-V of DBC is 3/5 x^3 - 3/5 x^2 + 7/10
+T-V of surgery with q = 1 is 43/5 x^3 - 43/5 x^2 + 57/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n80569
+T-V of DBC is 7/5 x^3 - 7/5 x^2 + 13/10
+T-V of surgery with q = -1 is 82/5 x^3 - 82/5 x^2 + 103/10
+T-V of surgery with q = 1 is 149/10 x^3 - 149/10 x^2 + 49/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n80782
+T-V of DBC is 1/2
+T-V of surgery with q = 1 is 7 x^3 - 7 x^2 + 9/2
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n82753
+T-V of DBC is 1/2
+T-V of surgery with q = -1 is 7 x^3 - 7 x^2 + 9/2
+T-V of surgery with q = 1 is 7 x^3 - 7 x^2 + 9/2
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n83543
+T-V of DBC is 1/10 x^3 - 1/10 x^2 + 7/10
+T-V of surgery with q = -1 is 91/10 x^3 - 91/10 x^2 + 57/10
+T-V of surgery with q = 1 is 38/5 x^3 - 38/5 x^2 + 47/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n86738
+T-V of DBC is 1/10 x^3 - 1/10 x^2 + 7/10
+T-V of surgery with q = -1 is 41/10 x^3 - 41/10 x^2 + 27/10
+T-V of surgery with q = 1 is 21/10 x^3 - 21/10 x^2 + 17/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n92786
+T-V of DBC is 2/5 x^3 - 2/5 x^2 + 3/10
+T-V of surgery with q = -1 is 32/5 x^3 - 32/5 x^2 + 43/10
+T-V of surgery with q = 1 is 42/5 x^3 - 42/5 x^2 + 53/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n92978
+T-V of DBC is 19/10 x^3 - 19/10 x^2 + 13/10
+T-V of surgery with q = -1 is 99/10 x^3 - 99/10 x^2 + 63/10
+T-V of surgery with q = 1 is 62/5 x^3 - 62/5 x^2 + 83/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n96262
+T-V of DBC is 3/5 x^3 - 3/5 x^2 + 17/10
+T-V of surgery with q = 1 is 38/5 x^3 - 38/5 x^2 + 26/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n98374
+T-V of DBC is 1/2
+T-V of surgery with q = -1 is 2 x^3 - 2 x^2 + 2
+T-V of surgery with q = 1 is 2 x^3 - 2 x^2 + 2
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n100582
+[working on T-V invariant of DBC]
+Too slow on cover; aborting this run early.
+
+Calculating Turaev-Viro invariants for K = 15n100582
+T-V of DBC is 7/5 x^3 - 7/5 x^2 + 13/10
+T-V of surgery with q = -1 is 82/5 x^3 - 82/5 x^2 + 103/10
+T-V of surgery with q = 1 is 149/10 x^3 - 149/10 x^2 + 49/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n102882
+T-V of DBC is 2/5 x^3 - 2/5 x^2 + 13/10
+T-V of surgery with q = -2 is 89/10 x^3 - 89/10 x^2 + 29/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n104788
+T-V of DBC is 1/2 x^3 - 1/2 x^2 + 3/2
+T-V of surgery with q = 1 is 7/2 x^3 - 7/2 x^2 + 5/2
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n106790
+T-V of DBC is x^3 - x^2 + 5/2
+T-V of surgery with q = -1 is 16 x^3 - 16 x^2 + 10
+T-V of surgery with q = 1 is 16 x^3 - 16 x^2 + 10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n108312
+T-V of DBC is 12/5 x^3 - 12/5 x^2 + 23/10
+T-V of surgery with q = -2 is 259/10 x^3 - 259/10 x^2 + 163/10
+T-V of surgery with q = 2 is 269/10 x^3 - 269/10 x^2 + 84/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n112883
+T-V of DBC is 1/10 x^3 - 1/10 x^2 + 7/10
+T-V of surgery with q = 2 is 58/5 x^3 - 58/5 x^2 + 77/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n115375
+T-V of DBC is 3/5 x^3 - 3/5 x^2 + 17/10
+T-V of surgery with q = -4 is 3/5 x^3 - 3/5 x^2 + 7/10
+T-V of surgery with q = -3 is 13/5 x^3 - 13/5 x^2 + 17/10
+T-V of surgery with q = -2 is 31/10 x^3 - 31/10 x^2 + 11/5
+T-V of surgery with q = -1 is 8/5 x^3 - 8/5 x^2 + 6/5
+T-V of surgery with q = 1 is 3/5 x^3 - 3/5 x^2 + 7/10
+T-V of surgery with q = 2 is 13/5 x^3 - 13/5 x^2 + 17/10
+T-V of surgery with q = 3 is 31/10 x^3 - 31/10 x^2 + 11/5
+T-V of surgery with q = 4 is 8/5 x^3 - 8/5 x^2 + 6/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n115453
+T-V of DBC is 19/10 x^3 - 19/10 x^2 + 23/10
+T-V of surgery with q = -2 is 319/10 x^3 - 319/10 x^2 + 99/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n115456
+[working on T-V invariant of DBC]
+Too slow on cover; aborting this run early.
+
+Calculating Turaev-Viro invariants for K = 15n115456
+T-V of DBC is -1/10 x^3 + 1/10 x^2 + 13/10
+T-V of surgery with q = -1 is 57/5 x^3 - 57/5 x^2 + 73/10
+T-V of surgery with q = 1 is 67/5 x^3 - 67/5 x^2 + 83/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n118067
+T-V of DBC is 8/5 x^3 - 8/5 x^2 + 27/10
+T-V of surgery with q = -2 is 263/5 x^3 - 263/5 x^2 + 327/10
+T-V of surgery with q = 2 is 561/10 x^3 - 561/10 x^2 + 347/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n118111
+T-V of DBC is 8/5 x^3 - 8/5 x^2 + 27/10
+T-V of surgery with q = -2 is 263/5 x^3 - 263/5 x^2 + 327/10
+T-V of surgery with q = 2 is 561/10 x^3 - 561/10 x^2 + 347/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n118590
+T-V of DBC is 8/5 x^3 - 8/5 x^2 + 27/10
+T-V of surgery with q = -2 is 263/5 x^3 - 263/5 x^2 + 327/10
+T-V of surgery with q = 2 is 561/10 x^3 - 561/10 x^2 + 347/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n118609
+T-V of DBC is 8/5 x^3 - 8/5 x^2 + 27/10
+T-V of surgery with q = -2 is 263/5 x^3 - 263/5 x^2 + 327/10
+T-V of surgery with q = 2 is 561/10 x^3 - 561/10 x^2 + 347/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n120113
+T-V of DBC is 31/10 x^3 - 31/10 x^2 + 11/5
+T-V of surgery with q = -1 is 811/10 x^3 - 811/10 x^2 + 507/10
+T-V of surgery with q = 1 is 448/5 x^3 - 448/5 x^2 + 557/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n120208
+T-V of DBC is 31/10 x^3 - 31/10 x^2 + 11/5
+T-V of surgery with q = -1 is 811/10 x^3 - 811/10 x^2 + 507/10
+T-V of surgery with q = 1 is 448/5 x^3 - 448/5 x^2 + 557/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n122195
+T-V of DBC is -2/5 x^3 + 2/5 x^2 + 6/5
+T-V of surgery with q = -1 is 11/10 x^3 - 11/10 x^2 + 7/10
+T-V of surgery with q = 1 is 11/10 x^3 - 11/10 x^2 + 7/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n124983
+T-V of DBC is 12/5 x^3 - 12/5 x^2 + 23/10
+T-V of surgery with q = 2 is 289/10 x^3 - 289/10 x^2 + 94/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n125119
+T-V of DBC is 2/5 x^3 - 2/5 x^2 + 3/10
+T-V of surgery with q = 2 is 57/5 x^3 - 57/5 x^2 + 73/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n125404
+T-V of DBC is 19/10 x^3 - 19/10 x^2 + 23/10
+T-V of surgery with q = -2 is 142/5 x^3 - 142/5 x^2 + 183/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n126096
+T-V of DBC is 1/10 x^3 - 1/10 x^2 + 7/10
+T-V of surgery with q = 1 is 53/5 x^3 - 53/5 x^2 + 67/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n127634
+T-V of DBC is 19/10 x^3 - 19/10 x^2 + 23/10
+T-V of surgery with q = -2 is 142/5 x^3 - 142/5 x^2 + 183/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n128377
+T-V of DBC is 11/10 x^3 - 11/10 x^2 + 7/10
+T-V of surgery with q = -1 is 71/10 x^3 - 71/10 x^2 + 47/10
+T-V of surgery with q = 1 is 41/10 x^3 - 41/10 x^2 + 27/10
+T-V of surgery with q = 2 is 68/5 x^3 - 68/5 x^2 + 87/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n128631
+T-V of DBC is 1/2
+T-V of surgery with q = -1 is 11 x^3 - 11 x^2 + 15/2
+T-V of surgery with q = 1 is 11 x^3 - 11 x^2 + 15/2
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n129093
+T-V of DBC is 1/2
+T-V of surgery with q = -1 is 4 x^3 - 4 x^2 + 7/2
+T-V of surgery with q = 1 is 4 x^3 - 4 x^2 + 7/2
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n129232
+T-V of DBC is 1/2
+T-V of surgery with q = -1 is 19/2 x^3 - 19/2 x^2 + 7
+T-V of surgery with q = 1 is 19/2 x^3 - 19/2 x^2 + 7
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n130096
+T-V of DBC is 11/10 x^3 - 11/10 x^2 + 6/5
+T-V of surgery with q = -2 is 88/5 x^3 - 88/5 x^2 + 56/5
+T-V of surgery with q = -1 is 71/10 x^3 - 71/10 x^2 + 47/10
+T-V of surgery with q = 1 is 61/10 x^3 - 61/10 x^2 + 21/5
+T-V of surgery with q = 2 is 171/10 x^3 - 171/10 x^2 + 107/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n130927
+T-V of DBC is 1/2 x^3 - 1/2 x^2 + 3/2
+T-V of surgery with q = 1 is 7 x^3 - 7 x^2 + 9/2
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n134849
+T-V of DBC is -1/10 x^3 + 1/10 x^2 + 9/5
+T-V of surgery with q = -1 is 139/10 x^3 - 139/10 x^2 + 44/5
+T-V of surgery with q = 1 is 67/5 x^3 - 67/5 x^2 + 83/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n135140
+T-V of DBC is 2/5 x^3 - 2/5 x^2 + 3/10
+T-V of surgery with q = -2 is 39/10 x^3 - 39/10 x^2 + 14/5
+T-V of surgery with q = 2 is 49/10 x^3 - 49/10 x^2 + 33/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n135777
+T-V of DBC is 59/10 x^3 - 59/10 x^2 + 19/5
+T-V of surgery with q = -1 is 1069/10 x^3 - 1069/10 x^2 + 663/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n135966
+T-V of DBC is 2/5 x^3 - 2/5 x^2 + 3/10
+T-V of surgery with q = -1 is 52/5 x^3 - 52/5 x^2 + 34/5
+T-V of surgery with q = 1 is 109/10 x^3 - 109/10 x^2 + 34/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n139959
+T-V of DBC is 11/10 x^3 - 11/10 x^2 + 6/5
+T-V of surgery with q = -4 is 41/10 x^3 - 41/10 x^2 + 16/5
+T-V of surgery with q = -3 is 91/10 x^3 - 91/10 x^2 + 57/10
+T-V of surgery with q = -2 is 38/5 x^3 - 38/5 x^2 + 26/5
+T-V of surgery with q = -1 is 21/10 x^3 - 21/10 x^2 + 17/10
+T-V of surgery with q = 1 is 41/10 x^3 - 41/10 x^2 + 16/5
+T-V of surgery with q = 2 is 91/10 x^3 - 91/10 x^2 + 57/10
+T-V of surgery with q = 3 is 38/5 x^3 - 38/5 x^2 + 26/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n142748
+T-V of DBC is -1/10 x^3 + 1/10 x^2 + 3/10
+T-V of surgery with q = -1 is 39/10 x^3 - 39/10 x^2 + 19/5
+T-V of surgery with q = 1 is 59/10 x^3 - 59/10 x^2 + 43/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n147264
+T-V of DBC is 1/2 x^3 - 1/2 x^2 + 3/2
+T-V of surgery with q = -1 is 7 x^3 - 7 x^2 + 9/2
+T-V of surgery with q = 1 is 7 x^3 - 7 x^2 + 9/2
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n153478
+T-V of DBC is 19/10 x^3 - 19/10 x^2 + 23/10
+T-V of surgery with q = 2 is 319/10 x^3 - 319/10 x^2 + 99/5
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n156539
+[working on T-V invariant of DBC]
+Too slow on cover; aborting this run early.
+
+Calculating Turaev-Viro invariants for K = 15n156539
+T-V of DBC is 8/5 x^3 - 8/5 x^2 + 17/10
+T-V of surgery with q = -2 is 121/10 x^3 - 121/10 x^2 + 77/10
+T-V of surgery with q = -1 is 18/5 x^3 - 18/5 x^2 + 27/10
+T-V of surgery with q = 1 is 61/10 x^3 - 61/10 x^2 + 21/5
+T-V of surgery with q = 2 is 68/5 x^3 - 68/5 x^2 + 87/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n159950
+T-V of DBC is 19/10 x^3 - 19/10 x^2 + 13/10
+T-V of surgery with q = -1 is 149/10 x^3 - 149/10 x^2 + 93/10
+T-V of surgery with q = 1 is 67/5 x^3 - 67/5 x^2 + 83/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n161526
+T-V of DBC is -1/10 x^3 + 1/10 x^2 + 3/10
+T-V of surgery with q = -1 is 139/10 x^3 - 139/10 x^2 + 44/5
+T-V of surgery with q = 1 is 109/10 x^3 - 109/10 x^2 + 73/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n161627
+T-V of DBC is 2/5 x^3 - 2/5 x^2 + 3/10
+T-V of surgery with q = 2 is 57/5 x^3 - 57/5 x^2 + 73/10
+Successfully distinguished remaining surgeries from DBC.
+
+Calculating Turaev-Viro invariants for K = 15n167626
+T-V of DBC is 1/2
+T-V of surgery with q = -1 is 11 x^3 - 11 x^2 + 15/2
+T-V of surgery with q = 1 is 11 x^3 - 11 x^2 + 15/2
+Successfully distinguished remaining surgeries from DBC.
