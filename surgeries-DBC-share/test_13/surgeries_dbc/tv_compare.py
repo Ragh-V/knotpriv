@@ -60,6 +60,7 @@ def run_tv_compare(base: Path, maxtime: float = .5) -> bool:
     if not WHATSLEFT.exists():
         with FAIL_LIST.open("r") as firstfile, WHATSLEFT.open("w") as secondfile:
             for line in firstfile:
+                print(f"copying {line.strip()} to whatsLeft.txt")
                 secondfile.write(line)
 
     # Initialize exceptions.txt if needed.
@@ -84,8 +85,8 @@ def run_tv_compare(base: Path, maxtime: float = .5) -> bool:
     for x in whatsLeftPrevious:
         if x != "Done!\n":
             whatsLeft.append(copy.deepcopy(x))
-
             data = x.strip("\n").split(";")
+            print(f"current data is {data}")
             knotList.append(data[0].strip(" "))
             DTList.append(data[1].strip(" "))
             pList.append(int(data[2].strip(" p = ")))
@@ -96,6 +97,7 @@ def run_tv_compare(base: Path, maxtime: float = .5) -> bool:
                 if s.strip() != "":
                     qvals.append(int(s))
             qList.append(qvals)
+
 
     # Overwrite whatsLeft.txt with the cleaned list (no "Done!" lines).
     with WHATSLEFT.open("w") as outfile:
@@ -258,11 +260,13 @@ def run_tv_compare(base: Path, maxtime: float = .5) -> bool:
             if newqList[k] == []:
                 whatsLeft[k] = "Done!\n"
                 with WHATSLEFT.open("w") as outfile:
+                    print(whatsLeft)
                     outfile.writelines(whatsLeft)
 
         if fail == 0:
             progressLines.append("Successfully distinguished remaining surgeries from DBC.\n")
             with PROGRESS.open("w") as outfile:
+                print(progressLines)
                 outfile.writelines(progressLines)
 
         state = 0
@@ -289,7 +293,7 @@ if __name__ == "__main__":
     parser.add_argument(
         "--maxtime",
         type=float,
-        default=1.4,
+        default=500000000000.0,
         help="Maximum allowed time (in seconds) for computing TV of the cover (default: 1.4)",
     )
 

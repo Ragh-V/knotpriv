@@ -3,6 +3,14 @@ import yaml
 import time
 from pathlib import Path
 
+from surgeries_dbc.io import (
+    load_knot_records,
+    write_classical_lists,
+    load_classical_lists,
+    write_hf_outputs,
+)
+
+
 # 1. SETUP PATHS
 # Use the current directory where you launch the script
 BASE = Path.cwd().resolve()
@@ -116,10 +124,15 @@ with open(BASE / "profiling_hf_casson.txt", "w") as f_prof:
     f_prof.write("-" * 65 + "\n")
     f_prof.write(f"Total Stage 3 Time: {t3_elapsed:.4f} s\n")
 
-# Save failList.txt for Stage 4
-with open(fail_list_path, "w") as f_fail:
-    for knot_name in fail_list:
-        f_fail.write(f"{knot_name}\n")
+
+
+if fail_list_path.exists():
+    print("failList.txt already exists; skipping HF + Casson stage.")
+else:
+    print("failList.txt not found; running HF + Casson comparison...")
+    attach_hf_data(BASE, records)
+    output_log = run_hf_casson(records)
+    write_hf_outputs(BASE, records, str(output_log))
 
 print(f"Stage 3 Complete. {len(fail_list)} knots queued for TV.")
 
